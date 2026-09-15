@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Details — CryptoDash</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="app">
+    <header class="topbar">
+        <a href="/dashboard" class="brand">
+            <span class="brand-mark">₿</span>
+            <span>Crypto<span class="accent">Dash</span></span>
+        </a>
+        <nav class="main-nav">
+            <a href="/dashboard">Dashboard</a>
+            <a href="/crypto" class="active">Markets</a>
+            <a href="/watchlist">Watchlist</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/profile">Profile</a>
+            <a href="/settings">Settings</a>
+            <a href="/logout" class="btn btn-ghost">Logout</a>
+        </nav>
+    </header>
+    <main class="dashboard">
+        <div class="page-head">
+            <div>
+                <a href="/crypto" class="back-link">← Back to Market</a>
+                <div id="coinHeader">
+                    <span class="eyebrow">COIN DETAILS</span>
+                    <h1 id="coinName">Loading...</h1>
+                    <p id="coinSymbol" class="muted"></p>
+                </div>
+            </div>
+            <button id="watchlistBtn" class="btn btn-primary">☆ Add to Watchlist</button>
+        </div>
+        <div class="coin-overview">
+            <div class="coin-price-card">
+                <span>Current Price</span>
+                <strong id="coinPrice">$0.00</strong>
+                <small id="coinChange">0.00%</small>
+            </div>
+            <div class="coin-price-card">
+                <span>Market Cap</span>
+                <strong id="coinMarketCap">$0</strong>
+                <small>Market Capitalization</small>
+            </div>
+            <div class="coin-price-card">
+                <span>24h Volume</span>
+                <strong id="coinVolume">$0</strong>
+                <small>Trading Volume</small>
+            </div>
+            <div class="coin-price-card">
+                <span>Rank</span>
+                <strong id="coinRank">#--</strong>
+                <small>Market Rank</small>
+            </div>
+        </div>
+        <section class="panel">
+            <div class="panel-head">
+                <div><span class="eyebrow">PRICE HISTORY</span><h2>Price Chart</h2></div>
+                <select id="chartDays">
+                    <option value="1">24 Hours</option>
+                    <option value="7">7 Days</option>
+                    <option value="30" selected>30 Days</option>
+                    <option value="90">90 Days</option>
+                    <option value="365">1 Year</option>
+                </select>
+            </div>
+            <div class="chart-container"><canvas id="coinChart"></canvas></div>
+        </section>
+        <div class="dashboard-grid">
+            <section class="panel">
+                <div class="panel-head">
+                    <div><span class="eyebrow">STATISTICS</span><h2>Market Statistics</h2></div>
+                </div>
+                <div class="detail-list">
+                    <div>
+                        <span>24h High</span>
+                        <strong id="coinHigh">$0.00</strong>
+                    </div>
+                    <div>
+                        <span>24h Low</span>
+                        <strong id="coinLow">$0.00</strong>
+                    </div>
+                    <div>
+                        <span>Circulating Supply</span>
+                        <strong id="coinSupply">--</strong>
+                    </div>
+                    <div>
+                        <span>Total Supply</span>
+                        <strong id="coinTotalSupply">--</strong>
+                    </div>
+                    <div>
+                        <span>All-Time High</span>
+                        <strong id="coinAth">$0.00</strong>
+                    </div>
+                </div>
+            </section>
+            <section class="panel">
+                <div class="panel-head">
+                    <div>
+                        <span class="eyebrow">ABOUT</span>
+                        <h2 id="aboutTitle">About</h2>
+                    </div>
+                </div>
+                <p id="coinDescription" class="muted">Loading coin information...</p>
+                <a id="coinWebsite" href="#" target="_blank" rel="noopener" class="btn btn-ghost">
+                    Official Website ↗
+                </a>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings — CryptoDash</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="topbar">
+    <a href="/dashboard" class="brand">
+        <span class="brand-mark">₿</span>
+        <span>Crypto<span class="accent">Dash</span></span>
+    </a>
+    <nav class="main-nav">
+        <a href="/dashboard">Dashboard</a>
+        <a href="/crypto">Markets</a>
+        <a href="/watchlist">Watchlist</a>
+        <a href="/portfolio">Portfolio</a>
+        <a href="/profile">Profile</a>
+        <a href="/settings" class="active">Settings</a>
+        <a href="/logout" class="btn btn-ghost">Logout</a>
+    </nav>
+</header>
+<main class="main-content">
+    <div class="page-head">
+        <div><span class="eyebrow">PREFERENCES</span><h1>Settings</h1>
+            <p class="muted">Customize your CryptoDash experience.</p>
+        </div>
+    </div>
+    <section class="panel settings-panel">
+        <div class="panel-head">
+            <div><span class="eyebrow">APPEARANCE</span><h2>Display Settings</h2></div>
+        </div>
+        <div class="setting-row">
+            <div>
+                <strong>Dark Mode</strong>
+                <p class="muted"> Use the dark theme throughout CryptoDash.</p>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="darkMode" checked>
+                <span class="slider"></span>
+            </label>
+        </div>
+    </section>
+    <section class="panel settings-panel">
+        <div class="panel-head">
+            <div><span class="eyebrow">NOTIFICATIONS</span><h2>Notifications</h2></div>
+        </div>
+        <div class="setting-row">
+            <div><strong>Price Alerts</strong><p class="muted">Receive alerts about important crypto price changes.</p></div>
+            <label class="switch"><input type="checkbox" id="priceAlerts"><span class="slider"></span></label>
+        </div>
+        <div class="setting-row">
+            <div>
+                <strong>Market Updates</strong>
+                <p class="muted">Get updates about major cryptocurrency market movements.</p>
+            </div>
+            <label class="switch">
+                <input type="checkbox" id="marketUpdates">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </section>
+    <section class="panel settings-panel">
+        <div class="panel-head">
+            <div>
+                <span class="eyebrow">PREFERENCES</span>
+                <h2>General</h2>
+            </div>
+        </div>
+        <div class="setting-row">
+            <div>
+                <strong>Currency</strong>
+                <p class="muted">
+                    Choose the currency used to display prices.
+                </p>
+            </div>
+            <select id="currency">
+                <option value="usd">USD ($)</option>
+                <option value="inr">INR (₹)</option>
+                <option value="eur">EUR (€)</option>
+                <option value="gbp">GBP (£)</option>
+            </select>
+        </div>
+    </section>
+    <section class="panel danger-panel settings-panel">
+        <div class="panel-head">
+            <div><span class="eyebrow">ACCOUNT</span><h2>Account Actions</h2></div>
+        </div>
+        <div class="setting-row">
+            <div><strong>Sign Out</strong><p class="muted">Sign out of your CryptoDash account.</p></div>
+            <a href="/logout" class="btn btn-ghost">Sign Out</a>
+        </div>
+    </section>
+</main>
+<script src="/static/app.js"></script>
+</body>
+</html>

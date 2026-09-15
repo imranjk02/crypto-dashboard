@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login — CryptoDash</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="auth-page">
+    <div class="auth-side">
+        <a class="brand" href="/">
+            <span class="brand-mark">₿</span>
+            <span>Crypto<span class="accent">Dash</span></span>
+        </a>
+        <div>
+            <span class="eyebrow">CRYPTO INTELLIGENCE</span>
+            <h1>
+                Trade your ideas with
+                <span class="gradient-text">better data.</span>
+            </h1>
+            <p>
+                Follow markets, build your watchlist and
+                understand your portfolio in one place.
+            </p>
+        </div>
+        <small>Live market data · Secure accounts · Responsive UI</small>
+    </div>
+    <div class="auth-card">
+        <a class="mobile-brand brand" href="/">
+            <span class="brand-mark">₿</span>
+            <span>Crypto<span class="accent">Dash</span></span>
+        </a>
+        <span class="eyebrow">WELCOME BACK</span>
+        <h2>Sign in to CryptoDash</h2>
+        <p class="muted">Access your markets, watchlist and portfolio.</p>
+        <form method="POST" action="/login" class="form">
+            <label>Email<input type="email" name="email" placeholder="you@example.com" required></label>
+            <label>Password<input type="password" name="password" placeholder="••••••••" required></label>
+            <div class="form-row between">
+                <label class="check"><input type="checkbox" name="remember">Remember me</label>
+                <a href="/forgot-password">Forgot password?</a>
+            </div>
+            <button class="btn btn-primary full" type="submit"> Sign In →</button>
+        </form>
+        <p class="auth-switch">Don't have an account?<a href="/signup">Create one</a></p>
+    </div>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account — CryptoDash</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="auth-page">
+    <div class="auth-side">
+        <a class="brand" href="/">
+            <span class="brand-mark">₿</span>
+            <span>Crypto<span class="accent">Dash</span></span>
+        </a>
+        <div>
+            <span class="eyebrow">CRYPTO INTELLIGENCE</span>
+            <h1>
+                Trade your ideas with
+                <span class="gradient-text">better data.</span>
+            </h1>
+            <p>
+                Follow markets, build your watchlist and
+                understand your portfolio in one place.
+            </p>
+        </div>
+        <small>Live market data · Secure accounts · Responsive UI</small>
+    </div>
+    <div class="auth-card">
+        <a class="mobile-brand brand" href="/">
+            <span class="brand-mark">₿</span>
+            <span>Crypto<span class="accent">Dash</span></span>
+        </a>
+        <span class="eyebrow">GET STARTED</span>
+        <h2>Create your account</h2>
+        <p class="muted">Start tracking the crypto market with CryptoDash.</p>
+        <form method="POST" action="/signup" class="form">
+            <label>Full Name<input type="text" name="name" placeholder="Your name" required></label>
+            <label>Email<input type="email" name="email" placeholder="you@example.com" required></label>
+            <label>Password<input type="password" name="password" placeholder="••••••••" required minlength="6"></label>
+            <label>Confirm Password<input type="password" name="confirm_password" placeholder="••••••••" required minlength="6"></label>
+            <label class="check"><input type="checkbox" required>I agree to the terms and privacy policy.</label>
+            <button class="btn btn-primary full" type="submit">Create Account →</button>
+        </form>
+        <p class="auth-switch">Already have an account?<a href="/login">Sign in</a></p>
+    </div>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>

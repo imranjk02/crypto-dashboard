@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watchlist — CryptoDash</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="app">
+    <header class="topbar">
+        <a href="/dashboard" class="brand">
+            <span class="brand-mark">₿</span>
+            <span>Crypto<span class="accent">Dash</span></span>
+        </a>
+        <nav class="main-nav">
+            <a href="/dashboard">Dashboard</a>
+            <a href="/crypto">Markets</a>
+            <a href="/watchlist" class="active">Watchlist</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/profile">Profile</a>
+            <a href="/settings">Settings</a>
+            <a href="/logout" class="btn btn-ghost">Logout</a>
+        </nav>
+    </header>
+    <main class="dashboard">
+        <div class="page-head">
+            <div>
+                <span class="eyebrow">MY WATCHLIST</span>
+                <h1>Watchlist</h1>
+                <p class="muted">Keep track of the cryptocurrencies you're watching.</p>
+            </div>
+            <a href="/crypto" class="btn btn-primary">+ Add Coins</a>
+        </div>
+        <div class="watchlist-summary">
+            <div class="watch-summary-card">
+                <span>Tracked Assets</span>
+                <strong id="watchlistCount">0 Coins</strong>
+                <small>Coins you're monitoring</small>
+            </div>
+            <div class="watch-summary-card">
+                <span>Market</span>
+                <strong>Live</strong>
+                <small class="positive">● Market data active</small>
+            </div>
+        </div>
+        <section class="panel">
+            <div class="panel-head">
+                <div><span class="eyebrow">TRACKED ASSETS</span><h2>Your Watchlist</h2></div>
+                <a href="/crypto" class="btn btn-ghost btn-sm">Browse Market</a>
+            </div>
+            <div id="watchlistGrid" class="watchlist-grid">
+                <div class="empty">Loading watchlist...</div>
+            </div>
+        </section>
+    </main>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>

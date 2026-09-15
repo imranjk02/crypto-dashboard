@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: cryptodash
+    env: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn app:app
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: MYSQLHOST
+        sync: false
+      - key: MYSQLPORT
+        sync: false
+      - key: MYSQLUSER
+        sync: false
+      - key: MYSQLPASSWORD
+        sync: false
+      - key: MYSQLDATABASE
+        sync: false

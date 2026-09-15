@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio — CryptoDash</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div class="app">
+    <header class="topbar">
+        <a href="/dashboard" class="brand">
+            <span class="brand-mark">₿</span>
+            <span>Crypto<span class="accent">Dash</span></span>
+        </a>
+        <nav class="main-nav">
+            <a href="/dashboard">Dashboard</a>
+            <a href="/crypto">Markets</a>
+            <a href="/watchlist">Watchlist</a>
+            <a href="/portfolio" class="active">Portfolio</a>
+            <a href="/profile">Profile</a>
+            <a href="/settings">Settings</a>
+            <a href="/logout" class="btn btn-ghost">Logout</a>
+        </nav>
+    </header>
+    <main class="dashboard">
+        <div class="page-head">
+            <div>
+                <span class="eyebrow">MY PORTFOLIO</span>
+                <h1>Portfolio</h1>
+                <p class="muted">Track your crypto holdings and profit or loss.</p>
+            </div>
+            <button class="btn btn-primary" onclick="openPortfolioModal()">+ Add Asset</button>
+        </div>
+        <div class="stats-grid">
+            <div class="stat-card">
+                <span>Total Value</span>
+                <strong id="totalPortfolioValue">$0.00</strong>
+                <small>Current portfolio value</small>
+            </div>
+            <div class="stat-card">
+                <span>Total Invested</span>
+                <strong id="totalInvested">$0.00</strong>
+                <small>Amount invested</small>
+            </div>
+            <div class="stat-card">
+                <span>Total Profit/Loss</span>
+                <strong id="totalProfitLoss">$0.00</strong>
+                <small id="totalProfitPercent">0.00%</small>
+            </div>
+            <div class="stat-card">
+                <span>Assets</span>
+                <strong id="portfolioAssetCount">0</strong>
+                <small>Coins held</small>
+            </div>
+        </div>
+        <section class="panel">
+            <div class="panel-head">
+                <div><span class="eyebrow">HOLDINGS</span><h2>Your Assets</h2></div>
+                <span class="market-count">Portfolio</span>
+            </div>
+            <div class="table-wrap">
+                <table class="portfolio-table">
+                    <thead>
+                        <tr>
+                            <th>Asset</th>
+                            <th>Quantity</th>
+                            <th>Buy Price</th>
+                            <th>Current Price</th>
+                            <th>Value</th>
+                            <th>P/L</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="portfolioTable">
+                        <tr><td colspan="7" class="empty">Loading portfolio...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</div>
+<div id="portfolioModal" class="modal">
+    <div class="modal-card">
+        <div class="modal-head">
+            <div><span class="eyebrow">PORTFOLIO</span><h2>Add Asset</h2></div>
+            <button type="button" class="modal-close" onclick="closePortfolioModal()">×</button>
+        </div>
+        <form id="portfolioForm" class="form">
+            <label>Coin
+                <input type="text" name="coin_id" placeholder="bitcoin" required>
+            </label>
+            <label>Quantity
+                <input type="number" name="quantity" placeholder="0.00" step="any" min="0"  required>
+            </label>
+            <label>Buy Price
+                <input type="number" name="buy_price" placeholder="0.00" step="any" min="0" required>
+            </label>
+            <button type="submit" class="btn btn-primary full">Add to Portfolio →</button>
+        </form>
+    </div>
+</div>
+<script src="/static/app.js"></script>
+</body>
+</html>
