@@ -595,9 +595,10 @@ def api_coin(coin_id):
                 "developer_data": "false"
             },
             headers={
-                "Accept": "application/json",
-                "User-Agent": "CryptoDash/1.0"
-            },
+    "Accept": "application/json",
+    "User-Agent": "CryptoDash/1.0",
+    "x-cg-demo-api-key": os.getenv("COINGECKO_API_KEY")
+},
             timeout=20
         )
 
