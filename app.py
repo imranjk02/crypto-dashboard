@@ -9,15 +9,16 @@ from werkzeug.security import generate_password_hash, check_password_hash
 
 app = Flask(__name__)
 
-app.secret_key = os.getenv("SECRET_KEY", "cryptodash-secret-key")
+app.secret_key = os.getenv("SECRET_KEY")
 
 
 DB_CONFIG = {
-    "host": os.getenv("MYSQLHOST", "localhost"),
+    "host": os.getenv("MYSQLHOST"),
     "port": int(os.getenv("MYSQLPORT", "3306")),
-    "user": os.getenv("MYSQLUSER", "root"),
-    "password": os.getenv("MYSQLPASSWORD", "4444"),
-    "database": os.getenv("MYSQLDATABASE", "cryptodash")
+    "user": os.getenv("MYSQLUSER"),
+    "password": os.getenv("MYSQLPASSWORD"),
+    "database": os.getenv("MYSQLDATABASE", "cryptodash"),
+    "ssl_disabled": False
 }
 
 
